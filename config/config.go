@@ -17,6 +17,7 @@ type Config struct {
 	ImageOCID          string `mapstructure:"IMAGE_OCID" validate:"required"`
 	SubnetOCID         string `mapstructure:"SUBNET_OCID" validate:"required"`
 	SshKey             string `mapstructure:"SSH_KEY" validate:"required"`
+	IntervalSec        int    `mapstructure:"INTERVAL_SEC" validate:"required"`
 }
 
 func New() (*Config, error) {

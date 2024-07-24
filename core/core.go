@@ -18,7 +18,6 @@ func (c *Core) CreateInstance() error {
 	c.logger.Info("Creating instance")
 	id, err := c.oci.CreateInstance()
 	if err != nil {
-		c.logger.Error("Failed to create instance", zap.Error(err))
 		return err
 	}
 	c.logger.Info("Created instance", zap.String("id", id))
